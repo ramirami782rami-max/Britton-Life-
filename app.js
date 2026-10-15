@@ -1,4 +1,4 @@
-const products=[
+let cart=JSON.parse
 [1,"حلقة السيليكون الذكية","مريحة وآمنة بتصميم أنيق",249,399,"إكسسوارات",4.8,"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80"],
 [2,"أرنب الهزاز المتطور","تحكم سهل وتصميم أنيق",349,499,"الألعاب الزوجية",4.9,"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=500&q=80"],
 [3,"جهاز المساج السحري","هادئ ومتعدد السرعات",199,299,"الألعاب الزوجية",4.7,"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80"],
