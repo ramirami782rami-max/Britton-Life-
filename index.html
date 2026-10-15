@@ -1,65 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRITTON LIFE</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRITTON LIFE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <a class="brand" href="#">
-        ♡ BRITTON LIFE
-    </a>
+  <a class="brand" href="#">♡ BRITTON LIFE</a>
 </header>
 
 <div class="layout">
+  <aside class="panel side">
+    <h3>جميع الأقسام</h3>
+    <button data-cat="الكل">جميع المنتجات</button>
+    <button data-cat="الألعاب الزوجية">الألعاب الزوجية</button>
+    <button data-cat="إكسسوارات">إكسسوارات وملحقات</button>
+    <button data-cat="رومانسية">مستلزمات رومانسية</button>
+    <button data-cat="كتب">الكتب والإرشادات</button>
+    <button data-cat="العروض">العروض والخصومات</button>
+  </aside>
 
-    <!-- القائمة الجانبية -->
-    <aside class="panel side">
-        <h3>جميع الأقسام</h3>
-        <p>الألعاب الزوجية</p>
-        <p>إكسسوارات وملحقات</p>
-        <p>مستلزمات رومانسية</p>
-        <p>الكتب والإرشادات</p>
-        <p>العروض والخصومات</p>
-    </aside>
+  <main>
+    <section class="hero panel">
+      <h1>BRITTON LIFE</h1>
+      <p>حياة أكثر من مجرد لعبة</p>
+      <button onclick="document.getElementById('products').scrollIntoView()">تسوق الآن</button>
+    </section>
 
+    <section class="panel">
+      <input id="search" type="search" placeholder="ابحث عن منتج...">
+      <label for="range">الحد الأعلى للسعر</label>
+      <input id="range" type="range" min="0" max="2000" value="2000">
+      <span id="max">إلى 2,000 ر.س</span>
 
-    <!-- الصفحة الرئيسية -->
-    <main>
+      <div id="filtercats">
+        <label><input type="checkbox" value="الألعاب الزوجية"> الألعاب الزوجية</label>
+        <label><input type="checkbox" value="إكسسوارات"> إكسسوارات</label>
+        <label><input type="checkbox" value="رومانسية"> رومانسية</label>
+        <label><input type="checkbox" value="4"> تقييم 4 فأعلى</label>
+      </div>
+      <button id="all">عرض الكل</button>
+    </section>
 
-        <section class="hero panel">
-            <h1>BRITTON LIFE</h1>
-            <p>حياة أكثر من مجرد لعبة</p>
-            <button>تسوق الآن</button>
-        </section>
+    <section class="products panel" id="products">
+      <h2>المنتجات</h2>
+      <div id="grid"></div>
+      <div id="mini"></div>
+    </section>
 
+    <section class="panel">
+      <h2>سلة التسوق</h2>
+      <span>عدد المنتجات: <span id="count">0</span></span>
+      <div id="items"><p class="empty">سلتك فارغة حالياً</p></div>
+      <p>الإجمالي: <strong id="total">0 ر.س</strong></p>
+      <button id="checkout">إتمام الطلب عبر واتساب</button>
+      <div id="toast"></div>
+    </section>
 
-       
-<section class="products panel" id="products">
-    <h2>المنتجات</h2>
+    <section class="panel">
+      <h3>اشترك في أخبارنا</h3>
+      <form id="news">
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <button type="submit">اشتراك</button>
+      </form>
+    </section>
+  </main>
 
-    <div id="grid"></div>
-
-    <div id="mini"></div>
-</section>
-    </main>
-
-
-    <!-- الجانب الأيمن -->
-    <aside class="panel right">
-        <h3>سلة التسوق</h3>
-        <p>لا توجد منتجات</p>
-    </aside>
-
+  <aside class="panel right">
+    <h3>سلة التسوق</h3>
+    <p>تجد منتجاتك في قسم السلة داخل الصفحة.</p>
+  </aside>
 </div>
-
-
 
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
@@ -76,7 +90,6 @@
   window.db = firebase.firestore();
 </script>
 <script src="app.js"></script>
-
 
 </body>
 </html>
