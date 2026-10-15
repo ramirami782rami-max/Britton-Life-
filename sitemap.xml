@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+theme: jekyll-theme-minimal
+title: Octocat's homepage
+description: Bookmark this to keep an eye on my project updates!<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
 </urlset>
